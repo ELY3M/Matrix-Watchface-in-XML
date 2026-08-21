@@ -1,0 +1,256 @@
+<WatchFace height="450" width="450">
+    <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+    <Metadata key="PREVIEW_TIME" value="10:30:03"/>
+
+    <UserConfigurations>
+        <!--
+        <ColorConfiguration id="themeColor" defaultValue="0" displayName="color_selector_display_name" screenReaderText="color_selector_display_name">
+        <ColorOption id="0" colors="#ff2ee362 #ff2ee362 #ff2ee362" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+        <ColorOption id="1" colors="#ff00ffff #ff00ffff #ff00ffff" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+        <ColorOption id="2" colors="#ffffffff #ffffffff #ffffffff" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+        <ColorOption id="3" colors="#ffebb95c #ffebb95c #ffebb95c" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+        <ColorOption id="4" colors="#ffe35128 #ffe35128 #ffe35128" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+        <ColorOption id="5" colors="#ffd3ff00 #ffd3ff00 #ffd3ff00" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+        <ColorOption id="6" colors="#ffff0004 #ffff0004 #ffff0004" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+        <ColorOption id="7" colors="#ffdf00ff #ffdf00ff #ffdf00ff" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+        <ColorOption id="8" colors="#ff7f7f7f #ff7f7f7f #ff7f7f7f" displayName="ith_option_display_name" screenReaderText="ith_option_display_name"/>
+    </ColorConfiguration>
+        -->
+
+        <ColorConfiguration id="themeColor" defaultValue="white" displayName="text_color_label" screenReaderText="text_color_label">
+            <ColorOption id="black" displayName="color_black" colors="#000000" />
+            <ColorOption id="white" displayName="color_white" colors="#FFFFFF" />
+            <ColorOption id="red" displayName="color_red" colors="#FF0000" />
+            <ColorOption id="orange" displayName="color_orange" colors="#FFA500" />
+            <ColorOption id="yellow" displayName="color_yellow" colors="#FFFF00" />
+            <ColorOption id="lime" displayName="color_lime" colors="#00FF00" />
+            <ColorOption id="green" displayName="color_green" colors="#008000" />
+            <ColorOption id="blue" displayName="color_blue" colors="#0000FF" />
+            <ColorOption id="aqua" displayName="color_aqua" colors="#00FFFF" />
+            <ColorOption id="indigo" displayName="color_indigo" colors="#6C63FF" />
+            <ColorOption id="violet" displayName="color_violet" colors="#C77DFF" />
+        </ColorConfiguration>
+
+        <!--
+digital.ttf
+ds_digib.ttf
+led_counter.ttf
+matrix.ttf
+miltown2.ttf
+mouseledumod.ttf
+orbitron_medium.otf
+pixellcd_7.ttf
+subwayticker.ttf
+        -->
+
+
+        <ListConfiguration defaultValue="8" displayName="faceStyle_display_name" id="font_style" screenReaderText="faceStyle_display_name">
+            <ListOption displayName="digital" id="0" screenReaderText="digital" />
+            <ListOption displayName="ds_digib" id="1" screenReaderText="ds_digib" />
+            <ListOption displayName="led_counter" id="2" screenReaderText="led_counter" />
+            <ListOption displayName="matrix" id="3" screenReaderText="matrix" />
+            <ListOption displayName="miltown2" id="4" screenReaderText="miltown2" />
+            <ListOption displayName="mouseledumod" id="5" screenReaderText="mouseledumod" />
+            <ListOption displayName="orbitron_medium" id="6" screenReaderText="orbitron_medium" />
+            <ListOption displayName="pixellcd_7" id="7" screenReaderText="pixellcd_7" />
+            <ListOption displayName="subwayticker" id="8" screenReaderText="subwayticker" />
+        </ListConfiguration>
+
+
+    </UserConfigurations>
+
+
+    <Scene backgroundColor="#ff000000">
+
+        <!-- animated back -->
+        <Group x="0" y="0" width="450" height="450" name="hack" tintColor="[CONFIGURATION.themeColor.0]" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0"/>
+            <PartAnimatedImage x="0" y="0" width="570" height="456" name="hack" alpha="153">
+                <AnimatedImage resource="hack" format="AGIF" thumbnail="hack"/>
+                <AnimationController play="ON_VISIBLE" repeat="TRUE" beforePlaying="FIRST_FRAME"/>
+            </PartAnimatedImage></Group>
+
+
+        <PartText x="51" y="50" width="348" height="50" name="Date" alpha="255">
+            <Text><Font family="SYNC_TO_DEVICE" size="26" color="#ffffffff">
+                <Template>%s %s %s
+                    <Parameter expression="[MONTH_S]"/>
+                    <Parameter expression="[DAY_Z]"/>
+                    <Parameter expression="[YEAR]"/>
+                </Template></Font></Text></PartText>
+
+
+        <Condition>
+            <Expressions>
+                <Expression name="digital">[CONFIGURATION.font_style] == 0</Expression>
+                <Expression name="ds_digib">[CONFIGURATION.font_style] == 1</Expression>
+                <Expression name="led_counter">[CONFIGURATION.font_style] == 2</Expression>
+                <Expression name="matrix">[CONFIGURATION.font_style] == 3</Expression>
+                <Expression name="miltown2">[CONFIGURATION.font_style] == 4</Expression>
+                <Expression name="mouseledumod">[CONFIGURATION.font_style] == 5</Expression>
+                <Expression name="orbitron_medium">[CONFIGURATION.font_style] == 6</Expression>
+                <Expression name="pixellcd_7">[CONFIGURATION.font_style] == 7</Expression>
+                <Expression name="subwayticker">[CONFIGURATION.font_style] == 8</Expression>
+            </Expressions>
+
+
+            <Compare expression="digital">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="digital" size="80" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+            <Compare expression="ds_digib">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="ds_digib" size="80" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+            <Compare expression="led_counter">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="led_counter" size="60" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+            <Compare expression="matrix">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="matrix" size="70" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+            <Compare expression="miltown2">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="miltown2" size="68" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+            <Compare expression="mouseledumod">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="mouseledumod" size="68" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+            <Compare expression="orbitron_medium">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="orbitron_medium" size="54" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+            <Compare expression="pixellcd_7">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="pixellcd_7" size="50" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+            <Compare expression="subwayticker">
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="subwayticker" size="56" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Compare>
+
+
+
+            <Default>
+                <PartText x="0" y="0" width="450" height="450">
+                    <Text>
+                        <Font family="subwayticker" size="60" color="[CONFIGURATION.themeColor.0]">
+                            <Template>%s:%s:%s %s
+                                <Parameter expression="[HOUR_1_12]"/>
+                                <Parameter expression="[MINUTE_Z]"/>
+                                <Parameter expression="[SECOND_Z]"/>
+                                <Parameter expression="[AMPM_STRING]"/>
+                            </Template></Font></Text></PartText>
+            </Default>
+
+
+
+        </Condition>
+
+
+        <!--
+        <PartText x="0" y="0" width="450" height="450">
+            <Text>
+                <Font family="matrix" size="75" color="[CONFIGURATION.themeColor.0]">
+                    <Template>%s:%s:%s %s
+                        <Parameter expression="[HOUR_1_12]"/>
+                        <Parameter expression="[MINUTE_Z]"/>
+                        <Parameter expression="[SECOND_Z]"/>
+                        <Parameter expression="[AMPM_STRING]"/>
+                    </Template></Font></Text></PartText>
+        -->
+
+
+        <!-- time -->
+        <!--
+        <DigitalClock
+            height="450" width="450" x="0" y="0">
+            <TimeText format="hh:mm:ss" height="100" width="450" x="0" y="175">
+                <Variant mode="AMBIENT" target="alpha" value="0" />
+                <Font color="#ffffffff" family="subwayticker" size="75" />
+            </TimeText>
+            <TimeText alpha="0" format="hh:mm:ss" height="100" width="450" x="0" y="175">
+                <Variant mode="AMBIENT" target="alpha" value="255" />
+                <Font color="#ffffffff" family="subwayticker" size="75" />
+            </TimeText>
+        </DigitalClock>
+        -->
+
+
+
+
+    </Scene>
+</WatchFace>

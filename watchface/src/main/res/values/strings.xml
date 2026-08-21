@@ -1,0 +1,24 @@
+<resources>
+    <string name="watch_face_name">Matrix Watch Face</string>
+    <string name="color_black">Black</string>
+    <string name="color_white">White</string>
+    <string name="color_red">Red</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_lime">Lime</string>
+    <string name="color_green">Green</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_aqua">Aqua</string>
+    <string name="color_indigo">Indigo</string>
+    <string name="color_violet">Violet</string>
+    <string name="faceStyle_display_name">Font Style</string>
+    <string name="digital">digital</string>
+    <string name="ds_digib">ds_digib</string>
+    <string name="led_counter">led_counter</string>
+    <string name="matrix">matrix</string>
+    <string name="miltown2">miltown2</string>
+    <string name="mouseledumod">mouseledumod</string>
+    <string name="orbitron_medium">orbitron_medium</string>
+    <string name="pixellcd_7">pixellcd_7</string>
+    <string name="subwayticker">subwayticker</string>
+</resources>
