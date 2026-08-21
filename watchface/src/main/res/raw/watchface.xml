@@ -71,15 +71,6 @@ subwayticker.ttf
             </PartAnimatedImage></Group>
 
 
-        <PartText x="51" y="50" width="348" height="50" name="Date" alpha="255">
-            <Text><Font family="SYNC_TO_DEVICE" size="26" color="#ffffffff">
-                <Template>%s %s %s
-                    <Parameter expression="[MONTH_S]"/>
-                    <Parameter expression="[DAY_Z]"/>
-                    <Parameter expression="[YEAR]"/>
-                </Template></Font></Text></PartText>
-
-
         <Condition>
             <Expressions>
                 <Expression name="digital">[CONFIGURATION.font_style] == 0</Expression>
@@ -95,9 +86,17 @@ subwayticker.ttf
 
 
             <Compare expression="digital">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="subwayticker" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="digital" size="80" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="digital" size="80" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -107,9 +106,17 @@ subwayticker.ttf
             </Compare>
 
             <Compare expression="ds_digib">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="ds_digib" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="ds_digib" size="80" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="ds_digib" size="80" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -119,9 +126,17 @@ subwayticker.ttf
             </Compare>
 
             <Compare expression="led_counter">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="led_counter" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="led_counter" size="60" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="led_counter" size="60" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -131,9 +146,17 @@ subwayticker.ttf
             </Compare>
 
             <Compare expression="matrix">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="matrix" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="matrix" size="70" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="matrix" size="70" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -143,9 +166,17 @@ subwayticker.ttf
             </Compare>
 
             <Compare expression="miltown2">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="miltown2" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="miltown2" size="68" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="miltown2" size="68" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -155,9 +186,17 @@ subwayticker.ttf
             </Compare>
 
             <Compare expression="mouseledumod">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="mouseledumod" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="mouseledumod" size="68" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="mouseledumod" size="68" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -167,9 +206,17 @@ subwayticker.ttf
             </Compare>
 
             <Compare expression="orbitron_medium">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="orbitron_medium" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="orbitron_medium" size="54" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="orbitron_medium" size="54" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -179,9 +226,17 @@ subwayticker.ttf
             </Compare>
 
             <Compare expression="pixellcd_7">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="pixellcd_7" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="pixellcd_7" size="50" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="pixellcd_7" size="50" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -191,9 +246,17 @@ subwayticker.ttf
             </Compare>
 
             <Compare expression="subwayticker">
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="subwayticker" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="subwayticker" size="56" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="subwayticker" size="56" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>
@@ -205,9 +268,17 @@ subwayticker.ttf
 
 
             <Default>
+                <PartText x="51" y="75" width="348" height="50" name="Date" alpha="255">
+                    <Text><Font family="subwayticker" size="26" color="[CONFIGURATION.themeColor]">
+                        <Template>%s, %s %s %s
+                            <Parameter expression="[DAY_OF_WEEK_S]"/>
+                            <Parameter expression="[MONTH_S]"/>
+                            <Parameter expression="[DAY_Z]"/>
+                            <Parameter expression="[YEAR]"/>
+                        </Template></Font></Text></PartText>
                 <PartText x="0" y="0" width="450" height="450">
                     <Text>
-                        <Font family="subwayticker" size="60" color="[CONFIGURATION.themeColor.0]">
+                        <Font family="subwayticker" size="56" color="[CONFIGURATION.themeColor]">
                             <Template>%s:%s:%s %s
                                 <Parameter expression="[HOUR_1_12]"/>
                                 <Parameter expression="[MINUTE_Z]"/>

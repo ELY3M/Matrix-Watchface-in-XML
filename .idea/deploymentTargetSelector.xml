@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="Matrix Watch Face">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-08-21T18:44:35.596583300Z">
+        <DropdownSelection timestamp="2026-08-21T21:20:51.854882600Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=D:\.android\avd\Wear_OS_Large_Round.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=5A221WRBNW40NM" />
             </handle>
           </Target>
         </DropdownSelection>
